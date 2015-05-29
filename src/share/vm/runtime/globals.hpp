@@ -3943,7 +3943,11 @@ class CommandLineFlags {
           "Enable event-based tracing")                                     \
                                                                             \
   product(bool, UseLockedTracing, false,                                    \
-          "Use locked-tracing when doing event-based tracing")
+          "Use locked-tracing when doing event-based tracing")              \
+                                                                            \
+  product_pd(bool, PreserveFramePointer,                                    \
+             "Use the FP register for holding the frame pointer "           \
+             "and not as a general purpose register.")
 
 /*
  *  Macros for factoring of globals
